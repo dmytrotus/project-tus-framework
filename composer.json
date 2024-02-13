@@ -1,0 +1,20 @@
+{
+    "name": "tus/framework",
+    "description": "It will be the best php framework in the world, someday...",
+    "type": "project",
+    "require": {
+        "symfony/var-dumper": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tus\\Framework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmytro Tus",
+            "email": "dmytrotus@gmail.com"
+        }
+    ]
+}

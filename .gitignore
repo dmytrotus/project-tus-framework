@@ -1,0 +1,13 @@
+/node_modules
+/vendor
+.env
+.env.backup
+.env.testing
+/.fleet
+/.idea
+/.vscode
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+/docker/mysql
+/docker/redis

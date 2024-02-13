@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+
+    # nginx
+    nginx-service:
+        image: nginx:stable-alpine
+        container_name: tus-framework-nginx
+        ports:
+            - "1111:80"
+        volumes:
+            - ./:/var/www/project
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - php82-service
+
+    # php
+    php82-service:
+        build:
+            context: .
+            dockerfile: ./docker/php/Dockerfile
+        container_name: tus-framework-php
+        ports:
+            - "1007:9000"
+        volumes:
+            - ./:/var/www/project
